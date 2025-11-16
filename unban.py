@@ -21,7 +21,7 @@ def print_banner():
 
 def download_bin_file():
     """Download the .bin file from GitHub if not exists"""
-    bin_url = "https://github.com/LORD-DAX1010101/Unban/blob/main/Whatsapp-unban.bin"
+    bin_url = "https://raw.githubusercontent.com/LORD-DAX1010101/Unban/main/unban.bin"
     local_bin_path = "Whatsapp-unban.bin"
     
     if os.path.exists(local_bin_path):
