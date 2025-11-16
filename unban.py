@@ -21,7 +21,7 @@ def print_banner():
 
 def download_bin_file():
     """Download the .bin file from GitHub if not exists"""
-    bin_url = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/bin/unban.bin"
+    bin_url = "https://github.com/LORD-DAX1010101/Unban/blob/main/unban.bin"
     local_bin_path = "unban.bin"
     
     if os.path.exists(local_bin_path):
