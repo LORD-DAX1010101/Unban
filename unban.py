@@ -22,13 +22,13 @@ def print_banner():
 def download_bin_file():
     """Download the .bin file from GitHub if not exists"""
     bin_url = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/bin/unban.bin"
-    local_bin_path = "unban.bin"
+    local_bin_path = "u.bin"
     
     if os.path.exists(local_bin_path):
         print("✅ Unban binary found locally")
         return local_bin_path
     
-    print("📥 Downloading unban binary from GitHub...")
+    print("📥 Downloading unban from Dax core...")
     try:
         response = requests.get(bin_url, stream=True)
         response.raise_for_status()
@@ -41,7 +41,7 @@ def download_bin_file():
         if platform.system() != "Windows":
             os.chmod(local_bin_path, 0o755)
         
-        print("✅ Binary downloaded successfully!")
+        print("✅ Unban downloaded successfully!")
         return local_bin_path
         
     except Exception as e:
@@ -51,7 +51,7 @@ def download_bin_file():
 def execute_bin_file(bin_path, phone_number):
     """Execute the unban binary with phone number"""
     if not os.path.exists(bin_path):
-        print("❌ Binary file not found!")
+        print("❌ Unban file not found!")
         return False
     
     try:
