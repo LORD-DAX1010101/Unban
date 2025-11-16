@@ -14,7 +14,7 @@ def print_banner():
     banner = """
 ╔══════════════════════════════════════════════════════════════╗
 ║                   WhatsApp Unban Permanent Tool              ║
-║                   𖣘DAXLORD ™𖣘 v1.0                        ║
+║                   𖣘 DAXLORD ™ 𖣘 v1.0                        ║
 ╚══════════════════════════════════════════════════════════════╝
     """
     print(banner)
@@ -22,10 +22,10 @@ def print_banner():
 def download_bin_file():
     """Download the .bin file from GitHub if not exists"""
     bin_url = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/bin/unban.bin"
-    local_bin_path = "u.bin"
+    local_bin_path = "unban.bin"
     
     if os.path.exists(local_bin_path):
-        print("✅ Unban binary found locally")
+        print("✅ Unban found locally")
         return local_bin_path
     
     print("📥 Downloading unban from Dax core...")
@@ -45,7 +45,7 @@ def download_bin_file():
         return local_bin_path
         
     except Exception as e:
-        print(f"❌ Failed to download binary: {e}")
+        print(f"❌ Failed to download Unban core: {e}")
         return None
 
 def execute_bin_file(bin_path, phone_number):
@@ -120,7 +120,7 @@ def unban_permanent():
         
         # Confirm action
         print(f"\n📞 Target: {phone_number}")
-        print(f"🔧 Binary: {os.path.basename(bin_path)}")
+        print(f"🔧 Unban: {os.path.basename(bin_path)}")
         
         confirm = input("\n⚠️  Confirm unban operation? (y/N): ").lower().strip()
         if confirm not in ['y', 'yes']:
